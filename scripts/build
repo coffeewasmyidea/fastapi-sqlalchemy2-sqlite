@@ -1,0 +1,6 @@
+#!/bin/bash
+
+APP_NAME=fastapi001
+
+# build app
+docker build . -t $APP_NAME
