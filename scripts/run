@@ -1,12 +1,6 @@
 #!/bin/bash
 
-IMAGE_NAME=fastapi001
-
-APP_NAME=fastapi001
-
 PORTS=" -p 8080:8080"
-
 ARGS=" --rm"
 
-# run app
-docker run $PORTS $ARGS --name $APP_NAME -it $IMAGE_NAME
+docker run $PORTS $ARGS --name ${1} -it ${2}

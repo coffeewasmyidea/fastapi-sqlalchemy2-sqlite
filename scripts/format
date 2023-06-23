@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ruff ${1} scripts --fix
+black ${1} 

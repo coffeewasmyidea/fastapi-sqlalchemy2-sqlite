@@ -1,0 +1,5 @@
+#!/bin/bash
+
+mypy ${1}
+ruff ${1} scripts
+black ${1} --check

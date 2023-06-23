@@ -1,4 +1,4 @@
-FROM python:3.11-buster
+FROM python:3.11-alpine
 
 ARG CURRENT_ENV
 
@@ -20,4 +20,4 @@ COPY . .
 RUN poetry config virtualenvs.create false \
   && poetry install $(test "$CURRENT_ENV" == production && echo "--no-dev") --no-interaction --no-ansi
 
-CMD [ "scripts/start" ]
+CMD [ "python", "run.py" ]
