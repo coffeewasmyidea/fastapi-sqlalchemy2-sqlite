@@ -46,3 +46,6 @@ release:
 
 alembic_upgrade:
 	alembic upgrade head
+
+test:
+	pytest -sv app/tests
